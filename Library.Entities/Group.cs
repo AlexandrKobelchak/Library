@@ -12,6 +12,7 @@ namespace Library.Entities
         [Column("name")]
         [MaxLength(32)]
         public string Name { get; set; }
+        [Column("facultyId")]
         public int FacultyId { get; set; }
         public Faculty Faculty { get; set; }
         public List<Student> Students { get; set; }

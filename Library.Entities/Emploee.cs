@@ -1,4 +1,5 @@
 ﻿using Library.Domain;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,8 +21,10 @@ namespace Library.Entities
         [Column("name")]
         [MaxLength(128)]
         public string LastName { get; set; }
-
+        [Column("departmentId")]
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
+
+        public List<ECard> ECards { get; set; }
     }
 }

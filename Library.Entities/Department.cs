@@ -12,6 +12,6 @@ namespace Library.Entities
         [Column("name")]
         [MaxLength(128)]
         public string Name { get; set; }
-        public List<Emploee> Teachers { get; set; }
+        public List<Emploee> Emploees { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Library.Domain;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,8 +21,11 @@ namespace Library.Entities
         [Column("name")]
         [MaxLength(128)]
         public string LastName { get; set; }
-
+        
+        [Column("groupId")]
         public int GroupId { get; set; }
         public Group Group { get; set; }
+        
+        public List<SCard> SCards { get; set; }
     }
 }

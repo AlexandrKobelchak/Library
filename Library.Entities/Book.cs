@@ -12,9 +12,19 @@ namespace Library.Entities
         [Column("name")]
         [MaxLength(256)]
         public string Name { get; set; }
+
+        [Column("pages")]
         public int Pages { get; set; }
+        
+        [Column("quantity")]
         public int Quantity { get; set; }
+        
+        [Column("yearPress")]
         public int Year { get; set; }
+
+        [Column("comment")]
+        [MaxLength(512)]
+        public string Comment { get; set; }
 
         [Column("themeId")]
         public int ThemeId { get; set; }
@@ -30,7 +40,7 @@ namespace Library.Entities
 
         public List<ECard> ECards { get; set; }
         public List<SCard> SCards { get; set; }
-        public List<BookAuthor> BooksAuthors{get;set;}
+        public List<BookAuthor> BooksAuthors{ get; set; }
         public List<Author> Authors { get; set; }
     }
 }
